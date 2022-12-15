@@ -8,6 +8,7 @@ function App() {
         <header>
           <Link to="/">FRAÎCHE</Link>
         </header>
+        <h1></h1>
         <main>
           <Routes>
             <Route path="/product/:slug" element={<ProductScreen />} />
