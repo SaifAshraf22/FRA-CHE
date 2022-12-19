@@ -7,16 +7,29 @@ import {
   Tabs,
   Toolbar,
   Typography,
+  useTheme,
+  useMediaQuery,
 } from '@mui/material';
 import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
 import { Box } from '@mui/system';
+import DrawerComp from './DrawerComp';
 const Navbar = ({ links }) => {
+  const theme = useTheme();
+  console.log(theme);
+  const isMatch = useMediaQuery(theme.breakpoints.down('sm'));
+  console.log(isMatch);
+
   const [value, setValue] = useState();
 
   return (
-    <AppBar sx={{backgroundImage:'linear-gradient(90deg, rgba(180,58,58,1) 2%, rgba(49,49,116,1) 36%, rgba(105,0,161,1) 73%, rgba(166,85,252,1) 100%)'}}>
+    <AppBar
+      sx={{
+        backgroundImage:
+          'linear-gradient(90deg, rgba(180,58,58,1) 2%, rgba(49,49,116,1) 36%, rgba(105,0,161,1) 73%, rgba(166,85,252,1) 100%)',
+      }}
+    >
       <Toolbar>
-        <Grid sx={{placeItems:'center'}} container>
+        <Grid sx={{ placeItems: 'center' }} container>
           <Grid item xs={2}>
             <Typography>
               <ShoppingBasketIcon />
@@ -37,11 +50,22 @@ const Navbar = ({ links }) => {
           <Grid item xs={1} />
           <Grid item xs={3}>
             <Box display="flex">
-              <Button sx={{marginLeft:"auto",background:'rgba(180,58,58,1)'}} variant="contained">Login</Button>
-              <Button sx={{marginLeft:1,background:'rgba(180,58,58,1)'}} variant="contained">Signup</Button>
+              <Button
+                sx={{ marginLeft: 'auto', background: 'rgba(180,58,58,1)' }}
+                variant="contained"
+              >
+                Login
+              </Button>
+              <Button
+                sx={{ marginLeft: 1, background: 'rgba(180,58,58,1)' }}
+                variant="contained"
+              >
+                Signup
+              </Button>
             </Box>
           </Grid>
         </Grid>
+        <DrawerComp />
       </Toolbar>
     </AppBar>
   );
