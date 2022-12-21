@@ -1,3 +1,4 @@
+import { Checkbox } from '@mui/material';
 import { Link } from 'react-router-dom';
 import data from '../data';
 
@@ -18,7 +19,12 @@ function HomeScreen() {
               <p>
                 <strong>${product.price}</strong>
               </p>
-              <button>Add to cart</button>
+              <div>
+                <button>Add to cart </button>
+                <pl>0</pl>
+              </div>
+              <button>Remove from cart </button>
+              <pl>0</pl>
             </div>
           </div>
         ))}

@@ -16,7 +16,7 @@ import DrawerComp from './DrawerComp';
 const Navbar = ({ links }) => {
   const theme = useTheme();
   console.log(theme);
-  const isMatch = useMediaQuery(theme.breakpoints.down('sm'));
+  const isMatch = useMediaQuery(theme.breakpoints.down('md'));
   console.log(isMatch);
 
   const [value, setValue] = useState();
@@ -29,43 +29,50 @@ const Navbar = ({ links }) => {
       }}
     >
       <Toolbar>
-        <Grid sx={{ placeItems: 'center' }} container>
-          <Grid item xs={2}>
-            <Typography>
-              <ShoppingBasketIcon />
-            </Typography>
-          </Grid>
-          <Grid item xs={5}>
-            <Tabs
-              indicatorColor="secondary"
-              textColor="inherit"
-              value={value}
-              onChange={(e, val) => setValue(val)}
-            >
-              {links.map((link, index) => (
-                <Tab key={index} label={link} />
-              ))}
-            </Tabs>
-          </Grid>
-          <Grid item xs={1} />
-          <Grid item xs={3}>
-            <Box display="flex">
-              <Button
-                sx={{ marginLeft: 'auto', background: 'rgba(180,58,58,1)' }}
-                variant="contained"
+        {isMatch ? (
+          <> <Typography>
+          <ShoppingBasketIcon />
+        </Typography>
+            <DrawerComp links={links}/>
+          </>
+        ) : (
+          <Grid sx={{ placeItems: 'center' }} container>
+            <Grid item xs={2}>
+              <Typography>
+                <ShoppingBasketIcon />
+              </Typography>
+            </Grid>
+            <Grid item xs={5}>
+              <Tabs
+                indicatorColor="secondary"
+                textColor="inherit"
+                value={value}
+                onChange={(e, val) => setValue(val)}
               >
-                Login
-              </Button>
-              <Button
-                sx={{ marginLeft: 1, background: 'rgba(180,58,58,1)' }}
-                variant="contained"
-              >
-                Signup
-              </Button>
-            </Box>
+                {links.map((link, index) => (
+                  <Tab key={index} label={link} />
+                ))}
+              </Tabs>
+            </Grid>
+            <Grid item xs={1} />
+            <Grid item xs={3}>
+              <Box display="flex">
+                <Button
+                  sx={{ marginLeft: 'auto', background: 'rgba(180,58,58,1)' }}
+                  variant="contained"
+                >
+                  Login
+                </Button>
+                <Button
+                  sx={{ marginLeft: 1, background: 'rgba(180,58,58,1)' }}
+                  variant="contained"
+                >
+                  Signup
+                </Button>
+              </Box>
+            </Grid>
           </Grid>
-        </Grid>
-        <DrawerComp />
+        )}
       </Toolbar>
     </AppBar>
   );

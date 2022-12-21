@@ -3,21 +3,21 @@ import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import HomeScreen from './screens/HomeScreen';
 import ProductScreen from './screens/ProductScreen';
-const linksAraay=["Products","Services","Overviwe","Conenct Us"];
+const linksAraay = ['Products', 'Services', 'Overviwe', 'Conenct Us'];
 function App() {
   document.title = 'FRAÎCHE';
   return (
     <BrowserRouter>
       <div className="nav">
-        <Navbar links={linksAraay}/>
+        <Navbar links={linksAraay} />
       </div>
       <div className="ui">
         <Button>ui</Button>
       </div>
       <div>
-        <header>
+        {/* <header>
           <Link to="/">FRAÎCHE</Link>
-        </header>
+        </header> */}
         {/*  test */}
         <main>
           <Routes>
