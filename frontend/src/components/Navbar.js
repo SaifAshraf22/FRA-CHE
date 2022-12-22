@@ -13,6 +13,7 @@ import {
 import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
 import { Box } from '@mui/system';
 import DrawerComp from './DrawerComp';
+import { Link } from 'react-router-dom';
 const Navbar = ({ links }) => {
   const theme = useTheme();
   console.log(theme);
@@ -30,16 +31,23 @@ const Navbar = ({ links }) => {
     >
       <Toolbar>
         {isMatch ? (
-          <> <Typography>
-          <ShoppingBasketIcon />
+          <> <Typography> 
+           
         </Typography>
             <DrawerComp links={links}/>
+            
+            <Link to="/">  <ShoppingBasketIcon /></Link>
+            
           </>
         ) : (
           <Grid sx={{ placeItems: 'center' }} container>
             <Grid item xs={2}>
               <Typography>
-                <ShoppingBasketIcon />
+              <header>
+          <Link to="/">FRAÎCHE</Link>
+        </header> 
+        <Link to="/"> <ShoppingBasketIcon /></Link>
+                
               </Typography>
             </Grid>
             <Grid item xs={5}>

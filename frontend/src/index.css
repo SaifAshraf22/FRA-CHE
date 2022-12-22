@@ -11,13 +11,17 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 /* header {
-  background-color: green;
-  padding: 16px;
+  Padding-Top : 5px ;
+  padding-left: 10px;
+  
 } */
 header a {
   color: white;
   font-weight: bold;
   text-decoration: none;
+  padding-bottom :6px ;
+  padding-top :0rem ;
+  padding-left: 2px;
 }
 main {
   padding: 1rem;
