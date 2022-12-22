@@ -44,7 +44,7 @@ const Navbar = ({ links }) => {
             <Grid item xs={2}>
               <Typography>
               <header>
-          <Link to="/">FRAÎCHE</Link>
+          <Link to="/" className='a2'>FRAÎCHE</Link>
         </header> 
         <Link to="/"> <ShoppingBasketIcon /></Link>
                 
