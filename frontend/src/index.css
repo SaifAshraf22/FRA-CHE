@@ -19,13 +19,6 @@ h1{
   padding-top :2% ;
   padding-left: 5%;
 }
-header a2{
-  color: black;
-  font-weight: bold;
-  text-decoration: none;
-  padding-top :2% ;
-  padding-left: 5%;
-}
 header a {
   color: white;
   font-weight: bold;
@@ -36,6 +29,7 @@ header a {
 main {
   padding: 1rem;
 }
+
 .products {
   display: flex;
   flex-wrap: wrap;
@@ -52,4 +46,8 @@ main {
 }
 .product-info {
   padding: 0.5rem;
+}
+.rating span{
+  /* color: #ffc000; */
+  color: red;
 }

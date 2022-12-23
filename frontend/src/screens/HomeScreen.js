@@ -1,6 +1,7 @@
+import { Button } from '@mui/material';
 import { Link } from 'react-router-dom';
 import data from '../data';
-
+import Rating from '@mui/material/Rating';
 function HomeScreen() {
   return (
     <div>
@@ -15,14 +16,15 @@ function HomeScreen() {
               <Link to={`/product/${product.slug}`}>
                 <p>{product.name}</p>
               </Link>
+              <Rating rsting ={product.rating} numReviews={product.numReviews}/>
               <p>
                 <strong>${product.price}</strong>
               </p>
               <div>
-                <button>Add to cart </button>
+                <Button >Add to cart </Button>
                 <pl>0</pl>
               </div>
-              <button>Remove from cart </button>
+              <Button>Remove from cart </Button>
               <pl>0</pl>
             </div>
           </div>
