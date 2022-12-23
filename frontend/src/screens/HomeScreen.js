@@ -2,6 +2,7 @@ import { Button } from '@mui/material';
 import { Link } from 'react-router-dom';
 import data from '../data';
 import Rating from '@mui/material/Rating';
+// import Count from '../counter'
 function HomeScreen() {
   return (
     <div>
@@ -21,10 +22,10 @@ function HomeScreen() {
                 <strong>${product.price}</strong>
               </p>
               <div>
-              <Button variant="contained" color="success">Add to cart </Button>
-                <pl>  0</pl>
+              <Button onClick="inc" variant="contained" color="success">Add to cart </Button>
+                <pl id="countLable">  0</pl>
               </div>
-              <Button color="error">Remove from cart </Button>
+              <Button id="dec" color="error">Remove from cart </Button>
               <pl>0</pl>
             </div>
           </div>

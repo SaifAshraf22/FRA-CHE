@@ -1,31 +1,21 @@
-import { Container } from '@mui/system';
 import React from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import HomeScreen from './screens/HomeScreen';
-import ProductScreen from './screens/ProductScreen';
-const linksAraay = ['Products', 'Services', 'Overviwe', 'Conenct Us'];
+
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import HomePage from './pages/HomePage/Homebage';
 
 function App() {
-  document.title = 'FRAÎCHE';
-
   return (
-    <BrowserRouter>
-      <div>
-        <header>
-          <Navbar links={linksAraay}></Navbar>
-        </header>
-        <main>
-          <Container>
-            <Routes>
-              <Route path="/product/:slug" element={<ProductScreen />} />
-              <Route path="/" element={<HomeScreen />} />
-            </Routes>
-          </Container>
-        </main>
-      
-      </div>
-    </BrowserRouter>
+    <div className='App'>
+      <title>dsd</title>
+      <Router>
+        <Routes>
+          <Route path='/' element={<HomePage>dd</HomePage>} />
+        </Routes>
+      </Router>
+
+
+
+    </div>
   );
 }
 
