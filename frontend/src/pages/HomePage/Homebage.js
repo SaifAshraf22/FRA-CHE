@@ -1,5 +1,7 @@
+import { Button, Rating } from "@mui/material";
 import { Fragment } from "react";
 import { Link } from "react-router-dom";
+
 import "./HomePage.css";
 
 function HomePage() {
@@ -14,7 +16,7 @@ function HomePage() {
     <div class="content">
         <h3>healthy Milky.</h3>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, sed! Qui maxime alias, porro dolorum explicabo inventore officia nam! Ipsa nulla in accusamus cum ad deleniti laudantium assumenda odit a.</p>
-        <a href="#"><button class="btn">discover more</button></a>
+        
     </div>
 
 </section>
@@ -31,14 +33,8 @@ function HomePage() {
 
         <div class="box">
             <img src="https://th.bing.com/th/id/R.6a066fbb176471bcb0a618b618219afd?rik=geDWuNP%2b2o%2f%2bBQ&pid=ImgRaw&r=0" alt=""/>
-            <h3>Milk</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half"></i>
-            </div>
+            <h3>س</h3>
+            <Rating></Rating>
             <div class="price"> <span>$15.10</span> $12.30 </div>
             <div class="icons">
                 <a href="#" class="fas fa-shopping-cart"></a>
