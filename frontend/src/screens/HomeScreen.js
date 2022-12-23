@@ -21,10 +21,10 @@ function HomeScreen() {
                 <strong>${product.price}</strong>
               </p>
               <div>
-                <Button >Add to cart </Button>
-                <pl>0</pl>
+              <Button variant="contained" color="success">Add to cart </Button>
+                <pl>  0</pl>
               </div>
-              <Button>Remove from cart </Button>
+              <Button color="error">Remove from cart </Button>
               <pl>0</pl>
             </div>
           </div>
