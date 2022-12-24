@@ -4,6 +4,7 @@ import data from '../data';
 import Rating from '@mui/material/Rating';
 // import Count from '../counter'
 function HomeScreen() {
+  document.title = 'FRAÎCHE'
   return (
     <div>
       <h1>Features Products</h1>
